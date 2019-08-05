@@ -1,0 +1,55 @@
+Вступление
+Показ к чему должны прити за 3 дня
+
+Что 
+
+// Объекты
+$('селектор')
+
+
+// Объявление переменных
+var или let
+
+// Консоль
+console.log()
+
+// Json массивы
+JSON поддерживает следующие типы данных:
+Объекты { ... }
+Массивы [ ... ]
+Примитивы:
+    строки,
+    числа,
+    логические значения true/false,
+    null
+
+// Функции
+function functionName(arguments) {
+    // code
+}
+
+// Условные операторы
+if, else
+
+// js/jQuery методы
+.on()
+.html()
+.append()
+.addClass('селектор')
+.closest('селектор')
+.find('селектор')
+.insertAfter('селектор')
+.remove()
+
+.index()
+.split()
+.val()
+
+$.getJSON(url, function(json, status) {}
+Arr.filter(function (el, i, arr) {}
+
+// Дополнительно
+.length
+
+// Циклы 
+for

@@ -1245,6 +1245,8 @@ input[type=checkbox]:disabled:checked:before, input[type=checkbox]:disabled:inde
     display: flex;
     -webkit-animation: showItem 0.5s;
     animation: showItem 0.5s; }
+    .productList__item.active .productList__content {
+      border: 1px solid red; }
     @media (min-width: 768px) {
       .productList__item {
         padding: 1.7em;
