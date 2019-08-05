@@ -1,0 +1,171 @@
+/* Header
+ ----------------------------------------------------------------------------- */
+.header {
+	background-color: #fff;
+	padding: 1em 0 0;
+	@extend %clear_a;
+
+	&__logo {}
+
+	&__nav {
+		width: 100%;
+		box-shadow: 0.063em 0.063em 0.188em rgba(0, 0, 0, 0.08);
+		background-color: #4ccfc1;
+		margin-top: 1.2em;
+		min-height: 2.5em;
+		position: relative;
+
+		@media (max-width: 767px) {
+			&:after {
+				content: '\2630';
+				display: block;
+				position: absolute;
+				right: 0.5em;
+				top: 0.17em;
+				line-height: 0.8;
+				font-size: 2em;
+				color: #fff;
+			}
+		}
+
+		ul {
+
+			@media (min-width: 768px) {
+				display: flex;
+			}
+			list-style: none;
+			padding: 0.5em 0;
+			margin: 0;
+
+			li {
+				flex-grow: 1;
+				text-align: center;
+
+				@media (min-width: 768px) {
+					&:nth-child(n+2) {
+						border-left: 1px solid #fff;
+					}
+				}
+			}
+
+			a {
+				color: #fff;
+				text-decoration: none;
+				font-family: bebas-neue;
+				font-size: 1.313em;
+				text-transform: uppercase;
+				display: block;
+
+				&:hover {
+					color: darken(#fff, 10%);
+				}
+			}
+
+			@media (max-width: 767px) {
+				height: 0;
+				overflow: hidden;
+				position: absolute;
+				background-color: #4ccfc1;
+				top: 0;
+				left: 0;
+				right: 0;
+				padding-top: 0;
+				padding-bottom: 0;
+				opacity: 0;
+				transition: 0.3s;
+
+				> li {
+					border-bottom: 1px solid #fff;
+					transition: 0.3s;
+
+					&:last-child {
+						border-bottom: none;
+					}
+				}
+
+			}
+
+		}
+
+		&:hover {
+			@media (max-width: 767px) {
+				ul {
+					height: auto;
+					top: 2.3em;
+					opacity: 1;
+
+					> li {
+						padding: 0.3em;
+					}
+				}
+			}
+		}
+	}
+
+	&__content {
+		display: flex;
+		flex-flow: row wrap;
+		justify-content: space-between;
+		align-items: center;
+	}
+
+	&__left {}
+
+	&__right {}
+
+	&__center {
+		@media (max-width: 767px) {
+			width: 100%;
+			order: 3;
+			margin-top: 0.5em;
+		}
+		@media (min-width: 768px) {
+			width: 50%;
+		}
+	}
+}
+
+.search {
+	position: relative;
+
+	input {
+		width: 100%;
+		padding-right: 2.4em;
+	}
+
+	&__icon {
+		position: absolute;
+		right: 0.7em;
+		top: 0.4em;
+		cursor: pointer;
+	}
+}
+
+.cart {
+	display: flex;
+	align-items: center;
+
+	img {
+		@media (min-width: 768px) {
+			margin-right: 0.6em;
+		}
+	}
+
+	&__total {
+		color: #a1a1a1;
+		font-family: bebas-neue;
+		font-size: 2.063rem;
+
+		@media (max-width: 767px) {
+			display: none;
+		}
+	}
+}
+
+// stiky menu
+.stiky {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+}

@@ -1,0 +1,182 @@
+doctype html
+html
+    head
+        meta(charset='utf-8')
+        title New project
+        meta(name='keywords', content='')
+        meta(name='description', content='')
+        meta(name='viewport', content='width=device-width, initial-scale=1, shrink-to-fit=no')
+        link(href='css/style.css', rel='stylesheet', type='text/css')
+    body
+        .wrapper
+            // begin header
+            header.header
+                // Begin container_center
+                .container_center
+                    .header__content
+                        .header__left
+                            a.header__logo(href='/')
+                                img(src='img/logo.png', alt='')
+                        .header__center
+                            .search
+                                input.js_search(type='text', name='', value='')
+                                img.search__icon(src='img/zoom.png', alt='')
+                        .header__right
+                            .cart
+                                img(src='img/cart.png', alt='')
+                                .cart__total $300
+                // End container_center
+                nav.header__nav
+                    // Begin container_center
+                    .container_center
+                        ul
+                            li
+                                a(href='') Home
+                            li
+                                a(href='') Sale
+                            li
+                                a(href='') Handbags
+                            li
+                                a(href='') Wallets
+                            li
+                                a(href='') Accessories
+                            li
+                                a(href='') Mens
+                            li
+                                a(href='') Store
+                            li
+                                a(href='') Shoes
+                            li
+                                a(href='') Vintage
+                            li
+                                a(href='') Services
+                            li
+                                a(href='') Contact us
+                    // End container_center
+
+            // end header
+
+            // begin main__content
+            main.main__content
+                // begin product
+                section#product.product
+                    .section__title
+                        .container_center
+                            h2 FEATURED pRODUCTS
+                    .container_center
+                        .productList
+                            .productList__item
+                                .productList__content
+                                    .productList__img
+                                        img(src='img/shoe2.png', alt='')
+                                    .productList__description
+                                        .productList__name bRANDED sHOE
+                                        .productList__price $300
+                                        .productList__action
+                                            button.btn(type='button') bUY NOW
+                            .productList__item
+                                .productList__content
+                                    .productList__img
+                                        img(src='img/tshirt3.png', alt='')
+                                    .productList__description
+                                        .productList__name bRANDED tEES
+                                        .productList__price $300
+                                        .productList__action
+                                            button.btn(type='button') bUY NOW
+                            .productList__item
+                                .productList__content
+                                    .productList__img
+                                        img(src='img/tshirt4.png', alt='')
+                                    .productList__description
+                                        .productList__name bRANDED sHOE
+                                        .productList__price $300
+                                        .productList__action
+                                            button.btn(type='button') bUY NOW
+                            .productList__item
+                                .productList__content
+                                    .productList__img
+                                        img(src='img/wallet1.png', alt='')
+                                    .productList__description
+                                        .productList__name bRANDED Wallet
+                                        .productList__price $300
+                                        .productList__action
+                                            button.btn(type='button') bUY NOW
+                            .productList__item
+                                .productList__content
+                                    .productList__img
+                                        img(src='img/bug1.png', alt='')
+                                    .productList__description
+                                        .productList__name EMS Women bAG
+                                        .productList__price $300
+                                        .productList__action
+                                            button.btn(type='button') bUY NOW
+                            .productList__item
+                                .productList__content
+                                    .productList__img
+                                        img(src='img/shorts1.png', alt='')
+                                    .productList__description
+                                        .productList__name bRANDED CARGOS 
+                                        .productList__price $300
+                                        .productList__action
+                                            button.btn(type='button') bUY NOW
+
+                        //- .productMore
+                        //-     button.btn.btn_success.js_showMore(type="submit") show More item
+
+                // end product
+
+            // end main__content
+
+        // end .wrapper
+
+        // begin footer
+        footer.footer
+            .container_center
+                -var footerNav = ['Alexis Hudson', 'American Apparel', 'Ben Sherman', 'Big Buddha', 'Chanel', 'Christian Audigier', 'Coach', 'Cole Haan']
+
+                mixin nav()
+                    ul.footerNav__list
+                        for item in footerNav
+                            li
+                                a(href='#')= item
+                .footerNav
+                    .footerNav__item
+                        .footerNav__title fEATURED sALE
+                        +nav()
+
+                    .footerNav__item
+                        .footerNav__title MENS STORE
+                        +nav()
+
+                    .footerNav__item
+                        .footerNav__title wOMEN sTORE
+                        +nav()
+
+                    .footerNav__item
+                        .footerNav__title qUICK LINKS
+                        +nav()
+
+            .footer__copy
+                // Begin container_center
+                .container_center
+                    a(href='#') Copyright © 2013 Css Author
+                // End container_center
+
+        // end footer
+
+        // Button trigger modal productModal
+        //- button(class="btn btn-primary btn-lg" data-toggle="modal" data-target="#productModal") Click to open modal
+        // Begin Modal productModal
+        .modal.fade.productModal#productModal
+            .modal-dialog
+                .modal-content
+                    a(href="#" class="modal-close" data-dismiss="modal")
+                    .modal-body
+                        .productModal__img
+                            img(src="#", alt="alt")
+                        .productModal__content
+                            .productModal__name 
+                            .productModal__price 
+                            .productModal__description 
+                            .productModal__action
+                                button.btn(type="button") Buy
