@@ -1,7 +1,7 @@
 Вступление
+https://docs.google.com/document/d/1XXldSQGXDD4X1Mz7loW4wHurHdT8qLCrJyTMrW_cnnw/edit#
 Показ к чему должны прити за 3 дня
 
-Что 
 
 // Объекты
 $('селектор')
