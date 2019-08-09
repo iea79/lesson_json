@@ -1,18 +1,18 @@
 var ss = SpreadsheetApp.getActiveSpreadsheet(), // spreadsheet
-      s = ss.getActiveSheet(); // sheet
+    s = ss.getActiveSheet(), // sheet
+    list = ss.getSheetByName('Data'), // выбираем лист "Data"
+    range = 'A:F'; // диапазон ячеек, который хотим выгружать
 
 function getData(){
   var result = [],
-      range = 'A:E', // диапазон ячеек, который хотим выгружать
-      values = s.getRange(range).getValues(),
-      last_row = parseInt(s.getLastRow());
+      values = list.getRange(range).getValues(),
+      last_row = parseInt(list.getLastRow());
 
   for (var i = 1; i < last_row; i++) {
       result.push(values[i]);
   }
   return result;
 }
-
 
 function doGet() {
   var data = getData();
